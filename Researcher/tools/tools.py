@@ -120,7 +120,7 @@ def get_web_urls(query: str, page: int = 1) -> str:
     return json.dumps(results_list, indent=2)
 
 # -------- CONFIG --------
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), '.env'))
 
 EMBED_URL = "https://openrouter.ai/api/v1/embeddings"
 API_KEY = os.getenv("APIKEY")

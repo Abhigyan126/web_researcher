@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from Researcher.tools.tools import get_web_urls, perform_deep_research
 
 def createLLM(model="openrouter/minimax/minimax-m2.7"):
-    load_dotenv()
+    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
 
     _apikey = os.getenv("APIKEY")
     _baseurl = os.getenv("BASEURL")
